@@ -1,0 +1,59 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles de base pour la page entière */
+body {
+  @apply bg-zinc-900 flex justify-center items-center min-h-screen m-0 overflow-hidden;
+}
+
+@keyframes scanlines {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 40px; } /* 10 * 4px (taille background-size) */
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 0.75; }
+  50% { opacity: 0.85; }
+}
+
+/* Styles personnalisés pour les effets CRT qui ne sont pas gérés nativement par Tailwind */
+.screen-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(18, 16, 16, 0) 50%,  /* Ligne transparente */
+    rgba(0, 0, 0, 0.25) 50% /* Ligne sombre pour scanline */
+  );
+  background-size: 100% 4px; /* Hauteur totale de la répétition (2px transparente + 2px sombre = 4px) */
+  z-index: 20; /* Au-dessus du contenu mais sous le flicker */
+  pointer-events: none;
+  /* Utilise l'animation définie dans tailwind.config.js */
+  animation: scanlines 10s linear infinite;
+}
+
+.screen-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(18, 16, 16, 0.05); /* Couche de bruit/assombrissement léger */
+  opacity: 0.8; /* Opacité gérée par l'animation */
+  z-index: 30; /* Au-dessus des scanlines */
+  pointer-events: none;
+  /* Utilise l'animation définie dans tailwind.config.js */
+  animation: flicker 0.15s infinite;
+}
+
+/* Optionnel: classe pour text-shadow si vous préférez aux valeurs arbitraires */
+/* .text-shadow-glow-green {
+  text-shadow: 0 0 5px theme('colors.emerald.400'), 0 0 10px rgba(51, 255, 51, 0.5);
+} */

@@ -1,0 +1,9 @@
+fastapi>=0.95.0
+uvicorn[standard]>=0.20.0
+websockets>=11.0
+numpy>=1.23.0
+soundfile
+pydub
+faster-whisper
+python-multipart
+mistralai
