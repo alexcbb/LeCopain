@@ -64,6 +64,13 @@ To get started with LeCopain, follow these steps:
    git clone --recurse-submodules https://github.com/alexcbb/LeCopain
    cd LeCopain
    ```
+   Do not forget to change the branch from the submodule `lerobot` to `lecopain`:
+   
+   ```bash
+   cd lecopain/lerobot
+   git checkout lecopain
+   ```
+
 
 2. **Install Dependencies**:
    System dependencies:
@@ -84,16 +91,16 @@ To get started with LeCopain, follow these steps:
    ```bash
    conda create --name "lecopain" python>=3.10
    conda activate lecopain
-   cd lecopain/backend
+   cd lecopain/guess_who/backend
    pip install -r requirements.txt
-   cd lerobot
+   cd ../../lerobot
    pip install --no-cache-dir -e ".[feetech]"
    cd ..
    ```
 
    Front installation:
    ```bash
-    cd ../front
+    cd guess_who/front
     npm install
    ```
 
@@ -105,7 +112,7 @@ To get started with LeCopain, follow these steps:
 3. **Run the Project**:
     In a first terminal, execute the front-end (for the user-interface):
    ```bash
-   cd lecopain/front/
+   cd lecopain/guess_who/front/
    npm run dev
    ```
 
@@ -117,7 +124,7 @@ To get started with LeCopain, follow these steps:
 
    In a second terminal execute the backend:
    ```bash
-   cd lecopain/backend/
+   cd lecopain/guess_who/backend/
    uvicorn src.main:app --host 0.0.0.0 --port 8000 --reload
    ```
 
@@ -145,9 +152,7 @@ If you use LeCopain in your research or projects, please cite our work:
 Join us in making LeCopain the ultimate board game companion! Your contributions and ideas are welcome as we strive to create a robot that can play any board game with you.
 
 ## 📋 To-Do List
-- [] Clean the code before the beginning of the project
-- [] Setup proper installation script
-- [] Setup submodule LeRobot from a fork
-- [] Setup contribution guidelines
-- [] Replicate the demo on a new environment
 - [] Collect new data
+- [] Explore chess game
+- [] Explore tic tac toe game
+- [] New ideas ??
