@@ -152,6 +152,7 @@ If you use LeCopain in your research or projects, please cite our work:
 Join us in making LeCopain the ultimate board game companion! Your contributions and ideas are welcome as we strive to create a robot that can play any board game with you.
 
 ## 📋 To-Do List
+- [] Split the READMEs per game (for installation & setup)
 - [] Collect new data
 - [] Explore chess game
 - [] Explore tic tac toe game
