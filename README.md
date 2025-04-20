@@ -8,6 +8,12 @@
   <br/>
 </p>
 
+[![Python versions](https://img.shields.io/pypi/pyversions/lerobot)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/MIT%20-blue.svg)](https://github.com/alexcbb/LeCopain/main/LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor-ff69b4.svg)](https://github.com/alexcbb/LeCopain/blob/main/CODE_OF_CONDUCT.md)
+[![GitHub Repo stars](https://img.shields.io/github/stars/alexcbb/LeCopain.svg)]()
+
+
 Welcome to LeCopain, an ambitious project aimed at creating a versatile robot capable of playing any board game with humans. LeCopain combines advanced natural language processing, speech interfaces, and robotic control to deliver an engaging and interactive gaming experience. Initially developed to play "Guess Who?", our vision is to expand LeCopain's capabilities to encompass a wide range of board games, making it the ultimate gaming companion.
 
 <p align="center">
@@ -153,6 +159,7 @@ Join us in making LeCopain the ultimate board game companion! Your contributions
 
 ## 📋 To-Do List
 - [] Split the READMEs per game (for installation & setup)
+- [] Setup a proper installation pipeline
 - [] Collect new data
 - [] Explore chess game
 - [] Explore tic tac toe game
